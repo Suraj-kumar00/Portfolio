@@ -17,13 +17,13 @@ export const ToolboxItems = ({
     <div
       className={twMerge(
         "flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]",
-        className
+        className,
       )}
     >
       <div
         className={twMerge(
           "flex flex-none py-0.5 gap-6 pr-6",
-          itemsWrapperClassName
+          itemsWrapperClassName,
         )}
       >
         {items.map((item) => (
