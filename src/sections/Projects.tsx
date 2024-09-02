@@ -1,6 +1,6 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import gurunimbusProjectThumbnail from "@/assets/images/gurunimbusProjectThumbnail.png";
+import FlashFathomAIThumbnail from "@/assets/images/FlashFathomAIThumbnail.png";
+import AIChatbotThumbnail from "@/assets/images/AIChatbotThumbnail.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,46 +10,48 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "GuruNimbus",
+    year: "2024",
+    title: "A RAG-Powered AI Chatbot",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title: "Rate My Professor Support Agent",
+      },
+      { title: "Web Scraping Integration" },
+      { title: "Advanced Search option to find Professors" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://guru-nimbus.vercel.app/",
+    image: gurunimbusProjectThumbnail,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "FlashFathom-AI",
+    year: "2024",
+    title: "The ultimate flashcard generator.",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "SaaS UI & Landing Page" },
+      { title: "AI Flashcards generator with OpenAI." },
+      { title: "Stripe Subscriptions for payments." },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "https://flash-fathom-ai.vercel.app/",
+    image: FlashFathomAIThumbnail,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "AI Chatbot",
+    year: "2024",
+    title: "Build Educational AI Chatbot",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: " Intelligent Responses of AI Chatbot" },
+      { title: " Deployment on AWS EC2: " },
+      { title: " Auth for Personalized chat experiences." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://aicustomersupport-alpha.vercel.app/",
+    image: AIChatbotThumbnail,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="project">
       <div className="container">
         <SectionHeader
           eyebrow="Real-World Results"
@@ -98,8 +100,7 @@ export const ProjectsSection = () => {
                   <a href={project.link}>
                     <button
                       className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold
-            inline-flex items-center justify-center gap-2 mt-8
-            "
+            inline-flex items-center justify-center gap-2 mt-8"
                     >
                       <span>Visit Live Site</span>
                       <ArrrowUpRightIcon className="size-4 " />

@@ -5,6 +5,7 @@
 - [Nextjs]()
 - [TypeScript]()
 - [TainwindCSS]()
+- [Framer Motion]()
 - [Vercel]()
 
 ## DevOps Practices:

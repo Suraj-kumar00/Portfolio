@@ -5,9 +5,13 @@ import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkelIcon from "@/assets/icons/sparkle.svg";
+import { MouseIcon } from "lucide-react";
 
 export const HeroSection = () => (
-  <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+  <div
+    className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip"
+    id="home"
+  >
     <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
       <div
         className="absolute inset-0 -z-30 opacity-5"
@@ -135,6 +139,10 @@ export const HeroSection = () => (
           <span className="font-semibold">Let's Connect</span>
         </button>
       </div>
+    </div>
+    <div className=" opacity-70 mt-12 justify-center flex items-center flex-col">
+      <MouseIcon size={40} className=" animate-bounce" />
+      <span className="text-sm font-medium">Scroll Down</span>
     </div>
   </div>
 );
