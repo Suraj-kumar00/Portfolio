@@ -130,7 +130,7 @@ const hobbies = [
     top: "5%",
   },
   {
-    title: "Bible",
+    title: "Reading Books",
     emoji: "📖",
     left: "50%",
     top: "5%",

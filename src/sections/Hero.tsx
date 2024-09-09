@@ -122,11 +122,11 @@ export const HeroSection = () => (
       <div></div>
       <div className="max-w-lg mx-auto">
         <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-          Building Exceptional User Experiences
+          Building Reliable Systems with DevOps Practices
         </h1>
         <p className=" mt-4 text-center text-white/60 md:text-lg">
-          I specialize in DevOps practices, high-performing web applications.
-          Let's discuss your next project.
+          I specialize and Interested in Cloud/DevOps practices, high-performing
+          web applications. Let's discuss your next project.
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
@@ -140,9 +140,9 @@ export const HeroSection = () => (
         </button>
       </div>
     </div>
-    <div className=" opacity-70 mt-12 justify-center flex items-center flex-col">
+    <div className=" opacity-60 mt-12 justify-center flex items-center flex-col">
       <MouseIcon size={40} className=" animate-bounce" />
-      <span className="text-sm font-medium">Scroll Down</span>
+      <span className=" text-sm font-medium">Scroll Down</span>
     </div>
   </div>
 );
