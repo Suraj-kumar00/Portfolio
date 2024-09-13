@@ -15,7 +15,7 @@ const footerLink = [
   },
   {
     title: "Resume",
-    href: "https://yourwebsite.com/resume.pdf",
+    href: "https://drive.google.com/file/d/1BoUFoiWZ-D35L6uZ01IZNO_42HbH_c92/view?usp=sharing",
   },
 ];
 
