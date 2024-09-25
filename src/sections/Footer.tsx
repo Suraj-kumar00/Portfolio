@@ -15,7 +15,7 @@ const footerLink = [
   },
   {
     title: "Resume",
-    href: "https://drive.google.com/file/d/1BoUFoiWZ-D35L6uZ01IZNO_42HbH_c92/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1weX-_T3v6ZtRYQal3zyyZk15fhQDJAfF/view?usp=sharing",
   },
 ];
 
