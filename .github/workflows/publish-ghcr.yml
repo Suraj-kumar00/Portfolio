@@ -1,13 +1,14 @@
 name: Build and Push Image to GHCR
 
 on:
-  workflow_dispatch:
-  release:
-    types: [published]
+  push:  # Triggers the workflow on every push to the repository
+    branches:
+      - main  # You can specify any branch you want (e.g., 'main' or 'master')
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: Suraj-kumar00/devsuraj  
+  IMAGE_NAME: Suraj-kumar00/devsuraj
+
 jobs:
   build-and-push-image:
     runs-on: ubuntu-latest
@@ -28,7 +29,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUBTOKEN }}
+          password: ${{ secrets.GITHUBTOKEN }}  # Make sure this secret is available
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
