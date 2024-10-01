@@ -1,10 +1,10 @@
 name: Build and Push Image to GHCR
 
 on:
-  push: 
+  push:  # Trigger the workflow on every push
     branches:
-      - main  
-  workflow_dispatch: 
+      - main  # Adjust to the branch you want to monitor for pushes
+  workflow_dispatch:  # Allows manual triggering
   release:
     types: [published]
 
@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GITHUBTOKEN_SECRECT }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -54,8 +54,3 @@ jobs:
             ghcr.io/suraj-kumar00/portfolio:latest
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: # Add build arguments if needed
-            NODE_ENV: production # Set environment variable
-
-      - name: Cleanup Docker
-        run: docker system prune -af
