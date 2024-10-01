@@ -30,7 +30,7 @@ npm i
 npm run dev
 ```
 
-## Installatino with Docker:
+## Installation with Docker:
  First install Docker Enginer or Docker Desktop then pull the image by below command.
 ```bash
 docker pull surajkumar00/portfolio
