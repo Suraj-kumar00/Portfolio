@@ -1,13 +1,13 @@
 name: Build and Push Image to GHCR
 
 on:
-  push:  # Triggers the workflow on every push to the repository
-    branches:
-      - main  # You can specify any branch you want (e.g., 'main' or 'master')
+  workflow_dispatch:
+  release:
+    types: [published]
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: Suraj-kumar00/devsuraj
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push-image:
@@ -20,7 +20,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get NPM Version
+      - name: get-npm-version
         id: package-version
         uses: martinbeentjes/npm-get-version-action@v1.3.1
 
@@ -29,7 +29,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUBTOKEN }}  # Make sure this secret is available
+          password: ${{ secrets.GITHUBTOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -47,7 +47,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: | 
-            ghcr.io/Suraj-kumar00/devsuraj:${{ steps.package-version.outputs.current-version }}
-            ghcr.io/Suraj-kumar00/devsuraj:latest
+            ghcr.io/suraj-kumar00/portfolio:${{ steps.package-version.outputs.current-version}}
+            ghcr.io/suraj-kumar00/portfolio:latest
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           labels: ${{ steps.meta.outputs.labels }}
