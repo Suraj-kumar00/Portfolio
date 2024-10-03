@@ -22,8 +22,8 @@ jobs:
 
       - name: Build the Docker image
         run: |
-          docker build . -t ghcr.io/${{ github.repository }}/portfolio:latest
+          docker build . -t ghcr.io/suraj-kumar00/portfolio:latest
 
       - name: Push the Docker image
         run: |
-          docker push ghcr.io/${{ github.repository }}/portfolio:latest
+          docker push ghcr.io/suraj-kumar00/portfolio:latest
