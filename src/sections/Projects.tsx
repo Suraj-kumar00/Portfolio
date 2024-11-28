@@ -1,6 +1,7 @@
 import gurunimbusProjectThumbnail from "@/assets/images/gurunimbusProjectThumbnail.png";
 import FlashFathomAIThumbnail from "@/assets/images/FlashFathomAIThumbnail.png";
 import AIChatbotThumbnail from "@/assets/images/AIChatbotThumbnail.png";
+import DevOpsURLtoQR from "@/assets/images/DevOpsURLtoQR.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -46,6 +47,24 @@ const portfolioProjects = [
     ],
     link: "https://aicustomersupport-alpha.vercel.app/",
     image: AIChatbotThumbnail,
+  },
+  {
+    company: "DevOps URL2QR",
+    year: "2024",
+    title: "Generetes QR Codes for the provided URL.",
+    results: [
+      { title: " Built a containerized URL-to-QR code app with Docker" },
+      {
+        title:
+          "Automated CI/CD with GitHub Actions and deployed on Kubernetes.",
+      },
+      {
+        title:
+          "Ensured monitoring with Grafana, CloudWatch, and AWS S3 storage. ",
+      },
+    ],
+    link: "https://github.com/Suraj-kumar00/DevOps-URL2QR",
+    image: DevOpsURLtoQR,
   },
 ];
 
